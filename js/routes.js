@@ -35,7 +35,7 @@ angular.module('offy-app')
                 parent: 'master'
             });
 
-            $locationProvider.html5Mode(true);
+            // $locationProvider.html5Mode(true);
         }
     ]);
 })();
