@@ -1,0 +1,29 @@
+.headerWhite {
+    position: fixed;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    color: $purple;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    background-color: #FFF;
+    z-index: $z-index-menu;
+
+    .headerWhite-action {
+        display: inline-flex;
+        padding: 12px 14px;
+    }
+
+    .headerWhite-name {
+        font-size: 16px;
+        white-space: nowrap;
+        margin-right: auto;
+    }
+
+    .icon {
+        fill: $purple;
+        width: 18px;
+        height: 18px;
+    }    
+}

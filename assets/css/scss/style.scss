@@ -1,0 +1,59 @@
+@import "helpers/_var-media-queries";
+@import "helpers/_var-general-functions";
+@import "general/fonts";
+@import "helpers/_reset";
+
+body {
+	max-width: 480px;
+	display: block;
+	margin: auto;
+
+	.header,
+	.menu,
+	.headerWhite,
+	.commentsAdd {
+		max-width: 480px;
+		margin: auto;
+		left: 0;
+		right: 0;
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.clear {
+	&:after,
+	&:before {
+		content: "";
+		clear: both;
+		display: block;
+	}
+}
+
+
+@import "components/_header";
+@import "components/_navCategory";
+@import "components/_offer";
+@import "components/_menu";
+@import "components/_search";
+@import "components/_btn";
+@import "components/_headerWhite";
+
+// PAGES
+@import "pages/_singleOffer";
+@import "pages/_comments";
+@import "pages/_login";
+
+// UTILITIES
+@import "helpers/_utilities";
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+}

@@ -1,0 +1,38 @@
+.btn {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: $font;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    background-color: #ccc;
+    padding: 12px;
+
+    &.btn-purple {
+        background-color: $purple;
+    }
+
+    &.btn-black {
+        background-color: #4d4d4d;
+    }
+
+    &.btn-white {
+        background-color: #FFF;
+        color: $purple;
+    }
+
+    &.btn-blue {
+        background-color: #0055a8;
+    }
+
+    .icon {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        top: 4px;
+        margin-right: 4px;
+    }
+}

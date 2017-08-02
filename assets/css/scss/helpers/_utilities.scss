@@ -1,0 +1,11 @@
+.u-margin-container {
+    margin: 0 16px;
+    position: relative;
+
+    &:after,
+    &:before {
+        clear: both;
+        display: block;
+        content: "";
+    }
+}

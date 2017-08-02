@@ -1,0 +1,19 @@
+// COLORS
+$purple: #8c2898;
+$black: #4a4a4a;
+$grey: #ccc;
+// -----------------------------------------------------------------------------
+
+// LAYOUT
+$z-index-menu: 10;
+// -----------------------------------------------------------------------------
+
+// MIXIN
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+// -----------------------------------------------------------------------------

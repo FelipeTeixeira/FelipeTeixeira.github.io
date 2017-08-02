@@ -1,0 +1,30 @@
+.header {
+	background: $purple;
+	height: 46px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: $z-index-menu;
+
+	img {
+		width: 80px;
+		margin: 12px 14px;
+		float: left;
+	}
+
+	.header-search {
+		padding: 10px 14px 6px;
+		float: right;
+		display: inline-block;
+
+		.icon-search {
+			width: 24px;
+			height: 24px;
+			fill: #FFF;
+		}
+	}
+
+	+ main {
+		padding-top: 68px;
+	}
+}

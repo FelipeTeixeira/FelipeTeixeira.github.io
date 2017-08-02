@@ -1,0 +1,27 @@
+.login {
+    background: url(../img/login.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    text-align: center;
+
+    .login-title {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #FFF;
+        font-weight: normal;
+        max-width: 170px;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+
+    .login-btn {
+        margin-top: 160px;
+    }
+
+    .btn {
+        margin: 8px auto;
+        display: inline-block;
+        max-width: calc(100% - 46px)
+    }
+}

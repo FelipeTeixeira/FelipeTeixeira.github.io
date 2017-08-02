@@ -1,0 +1,131 @@
+body {
+	&.js-search-active {
+		overflow: hidden;
+
+		.search {
+			height: 100%;
+			width: 100%;
+			opacity: 10;
+		}
+	}
+}
+
+.search {
+	position: fixed;
+	width: 0;
+	height: 0;
+	top: 0;
+	right: 0;
+	background: #69339c;
+    background: linear-gradient(135deg,  #8b2898 0%,#7a2e9a 31%, #483ea0 70%, #4f3c9f 80%, #463fa0 90%, #124fa6 100%);
+	z-index: $z-index-menu + 1;
+	overflow: hidden;
+	opacity: 0;
+	will-change: opacity;
+	transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+
+	.search-btnSearch {
+		float: right;
+		padding: 10px 14px 6px;
+
+		.icon {
+			width: 24px;
+			height: 24px;
+			fill: #FFF;
+		}
+	}
+
+	.search-back {
+		padding: 10px 14px 6px;
+		display: block;
+		float: left;
+
+		.icon {
+			width: 18px;
+			height: 18px;
+			fill: #FFF;
+		}
+	}
+
+	.search-input {
+		border: none;
+		width: 100%;
+		height: 40px;
+		background: transparent;
+		color: #FFF;
+		font-family: $font;
+		font-size: 20px;
+		font-weight: 900;
+		padding: 16px;
+		border-radius: 0;
+
+		&::-webkit-search-decoration,
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-results-button,
+		&::-webkit-search-results-decoration {
+			display: none;
+		}
+
+		&::-webkit-input-placeholder {
+		    color: #EED9F4;
+		}
+
+		&:-moz-placeholder {
+		    color: #EED9F4;
+		}
+
+		&::-moz-placeholder {
+		    color: #EED9F4;
+		}
+
+		&:-ms-input-placeholder {
+		    color: #EED9F4;
+		}
+	}
+
+	.search-recentList-container {
+		margin: 40px 16px 0;
+	}
+
+	.search-recentList-title {
+		font-size: 14px;
+		color: #ac71bb;
+	}
+
+	.search-recentList-btnClear {
+		font-size: 10px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #ac71bb;
+		border-radius: 20px;
+		border: 1px solid #ac71bb;
+		float: right;
+		padding: 2px 20px 0;
+	}
+
+	.search-recentList {
+		font-weight: bold;
+		color: #FFF;
+		padding-bottom: 16px;
+		overflow-y:auto;
+		max-height: calc(100vh - 156px);
+		clear: both;
+
+		li {
+			font-size: 12px;
+			padding: 20px 0;
+			border-bottom: 1px solid #9C68CE;
+		}
+
+		.search-recentList-remove {
+			float: right;
+			padding: 2px 2px 0;
+
+			.icon {
+				fill: #c2b1d9;
+				width: 10px;
+				height: 10px;
+			}
+		}
+	}
+}
