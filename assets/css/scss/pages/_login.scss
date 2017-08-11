@@ -1,8 +1,8 @@
 .login {
-    background: url(../img/login.jpg) no-repeat;
+    background: url(../img/login.jpg) no-repeat fixed;
     background-size: cover;
     position: relative;
-    height: 100vh;
+    height: 100%;
     text-align: center;
 
     .login-title {
@@ -15,6 +15,19 @@
         padding: 40px 0;
     }
 
+    .login-linkBack {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 16px 12px;
+
+        .icon {
+            fill: #FFF;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
     .login-btn {
         margin-top: 160px;
     }
@@ -22,6 +35,58 @@
     .btn {
         margin: 8px auto;
         display: inline-block;
-        max-width: calc(100% - 46px)
+        max-width: 250px;
+    }
+
+    // INPUT EMAIL
+    .inputGroup {
+        max-width: 214px;
+        margin: 0 auto 16px;
+
+        &:first-child {
+            margin-top: 76px;
+        }
+
+        .icon {
+            fill: #FFF;
+        }
+
+        .inputGroup-field {
+            color: #FFF;
+            border-color: #FFF;
+            border-color: #e5d6e6;
+            @include inputPlaceholder(#e5d6e6);
+        }
+
+        .icon-eye {
+            fill: #b674ba;
+            width: 22px;
+            height: 22px;
+            right: 0;
+            left: inherit;
+
+        }
+    }
+
+    .login-btnEnter {
+        max-width: 150px;
+    }
+
+    .login-forgotPassword,
+    .login-notAccount {
+        font-size: 11px;
+        color: #FFF;
+        font-weight: bold;
+        display: block;
+    }
+
+    .login-forgotPassword {
+        margin: 14px auto 40px;
+    }
+
+    .login-notAccount {
+        text-transform: uppercase;
+        text-decoration: underline;
+        margin-top: 30px;
     }
 }

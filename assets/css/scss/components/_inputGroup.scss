@@ -1,0 +1,27 @@
+.inputGroup {
+    position: relative;
+    margin-bottom: 8px;
+
+    .inputGroup-label {
+
+    }
+
+    .inputGroup-field {
+        padding: 10px;
+        border-bottom: 1px solid #9e9e9e;
+        // border: 1px solid #9e9e9e;
+        width: 100%;
+    }
+
+    .icon {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 16px;
+        height: 16px;
+
+        + .inputGroup-field {
+            padding-left: 24px;
+        }
+    }
+}

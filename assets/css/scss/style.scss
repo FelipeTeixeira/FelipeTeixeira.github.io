@@ -1,5 +1,6 @@
 @import "helpers/_var-media-queries";
 @import "helpers/_var-general-functions";
+@import "mixins/_inputPlaceholder";
 @import "general/fonts";
 @import "helpers/_reset";
 
@@ -40,6 +41,7 @@ body {
 @import "components/_search";
 @import "components/_btn";
 @import "components/_headerWhite";
+@import "components/_inputGroup";
 
 // PAGES
 @import "pages/_singleOffer";
