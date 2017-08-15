@@ -1,0 +1,22 @@
+.arrowBack {
+    padding: 16px 12px;
+    display: inline-flex;
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        fill: #FFF;
+    }
+}
+
+.arrowBack-absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.arrowBack-purple {
+    .icon {
+        fill: $purple;
+    }
+}

@@ -1,0 +1,50 @@
+.checkbox {
+    input {
+        display: none;
+
+        &:checked {
+            + .checkbox-label {
+                &:after {
+                    background-color: $purple;
+                }
+            }
+        }
+    }
+
+
+    .checkbox-label {
+        color: #FFF;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 160px;
+        display: block;
+        margin: auto;
+        font-size: 9px;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            display: block;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        &:after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            display: block;
+            margin: auto;
+            border-radius: 4px;
+            position: absolute;
+            top: 2px;
+            right: 0;
+            left: 0;
+            transition: background-color 0.2s ease;
+        }
+    }
+}

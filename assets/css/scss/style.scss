@@ -33,24 +33,6 @@ body {
 	}
 }
 
-
-@import "components/_header";
-@import "components/_navCategory";
-@import "components/_offer";
-@import "components/_menu";
-@import "components/_search";
-@import "components/_btn";
-@import "components/_headerWhite";
-@import "components/_inputGroup";
-
-// PAGES
-@import "pages/_singleOffer";
-@import "pages/_comments";
-@import "pages/_login";
-
-// UTILITIES
-@import "helpers/_utilities";
-
 .icon {
 	display: inline-block;
 	width: 1em;
@@ -59,3 +41,29 @@ body {
 	stroke: currentColor;
 	fill: currentColor;
 }
+
+@import "components/_arrowBack";
+@import "components/_header";
+@import "components/_navCategory";
+@import "components/_offer";
+@import "components/_menu";
+@import "components/_search";
+@import "components/_headerWhite";
+
+// FORM
+@import "components/_inputGroup";
+@import "components/_checkboxRadiobutton";
+@import "components/_btn";
+
+
+// PAGES
+@import "pages/_login";
+@import "pages/_loginCreateAccount";
+@import "pages/_singleOffer";
+@import "pages/_comments";
+@import "pages/_alerts";
+@import "pages/_favorites";
+
+
+// UTILITIES
+@import "helpers/_utilities";

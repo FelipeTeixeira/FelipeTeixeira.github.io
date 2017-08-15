@@ -1,0 +1,52 @@
+<main class="loginCreateAccount">
+    <img src="assets/img/offy-logo.svg" alt="Offy - caminho mais curto para os descontos" width="130" height="42">
+
+    <h1 class="loginCreateAccount-title">
+        Crie sua conta em 1 minuto :-)
+    </h1>
+
+    <a href="#/login" class="arrowBack arrowBack-absolute">
+        <svg class="icon icon-back">
+            <use xlink:href="#icon-back"></use>
+        </svg>
+    </a>
+
+    <form action="#" autocomplete="off">
+        <div class="inputGroup loginCreateAccount-inputGroup">
+            <svg class="icon icon-menu-user">
+                <use xlink:href="#icon-menu-user"></use>
+            </svg>
+            <input type="text" class="inputGroup-field" placeholder="seu nome">
+        </div>
+
+        <div class="inputGroup loginCreateAccount-inputGroup">
+            <svg class="icon icon-email">
+                <use xlink:href="#icon-email"></use>
+            </svg>
+            <input type="email" class="inputGroup-field" placeholder="seu e-mail">
+        </div>
+
+        <div class="inputGroup loginCreateAccount-inputGroup">
+            <svg class="icon icon-password">
+                <use xlink:href="#icon-password"></use>
+            </svg>
+            <input type="{{inputType}}" id="login-password" class="inputGroup-field" placeholder="defina uma senha" autocomplete="new-password">
+            <svg class="icon icon-eye icon-right" ng-click="hideShowPassword()">
+                <use xlink:href="#icon-eye"></use>
+            </svg>
+        </div>
+
+        <div class="checkbox loginCreateAccount-checkbox">
+            <input type="checkbox" id="terms">
+            <label for="terms" class="checkbox-label">
+                Declaro que li e concordo com os termos de uso do Offy
+            </label>
+        </div>
+
+        <button type="button" class="btn btn-purple loginCreateAccount-btnCreate">
+            Criar Conta
+        </button>
+
+    </form>
+
+</main>

@@ -4,53 +4,17 @@
     </h1>
     <img src="assets/img/offy-logo.svg" alt="Offy - caminho mais curto para os descontos" width="164">
 
-    <span class="login-linkBack" ng-show="showEmail" ng-click="showEmail = false">
-        <svg class="icon icon-back">
-            <use xlink:href="#icon-back"></use>
-        </svg>
-    </span>
-
-    <div class="login-btn" ng-show="!showEmail">
-        <a href="#/" class="btn btn-blue">
+    <div class="login-actionBtns">
+        <a href="#/" class="btn btn-blue login-btn">
             Entrar com facebook
         </a>
-        <button type="button" class="btn btn-white" ng-click="showEmail = true">
+
+        <a href="#/entrar-email" class="btn btn-white login-btn">
             Entrar com e-mail
-        </button>
-        <a href="#/" class="btn btn-black">
+        </a>
+
+        <a href="#/criar-conta" class="btn btn-black login-btn">
             não tenho conta
         </a>
     </div>
-
-    <form action="#" ng-show="showEmail" autocomplete="off">
-        <div class="inputGroup">
-            <svg class="icon icon-menu-user">
-                <use xlink:href="#icon-menu-user"></use>
-            </svg>
-            <input type="email" class="inputGroup-field" placeholder="seu e-mail" value="">
-        </div>
-        <div class="inputGroup">
-            <svg class="icon icon-password">
-                <use xlink:href="#icon-password"></use>
-            </svg>
-            <input type="{{inputType}}" id="login-password" class="inputGroup-field" placeholder="sua senha" autocomplete="new-password">
-            <svg class="icon icon-eye" ng-click="hideShowPassword()">
-                <use xlink:href="#icon-eye"></use>
-            </svg>
-        </div>
-
-        <a href="#" class="login-forgotPassword">
-            Esqueci minha senha
-        </a>
-
-        <button type="button" class="btn btn-white login-btnEnter">
-            Entrar
-        </button>
-
-        <a href="#" class="login-notAccount">
-            Não tenho conta
-        </a>
-
-    </form>
-
 </main>
