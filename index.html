@@ -43,6 +43,7 @@
     <script src="js/controllers/offerCtrl.js"></script>
     <script src="js/controllers/commentsCtrl.js"></script>
     <script src="js/controllers/favoritesCtrl.js"></script>
+    <script src="js/controllers/publishCtrl.js"></script>
 
     <script src="js/controllers/alertsCtrl.js"></script>
 
@@ -125,6 +126,25 @@
     		};
 
     		search();
+
+            var inputGroup = function () {
+                var input,
+                    label;
+                $(document).on("focus", ".inputGroup-field", function () {
+                    input = $(this);
+                    label = input.closest(".inputGroup").find(".inputGroup-label");
+
+                    label.addClass("active");
+
+                }).focusout(function () {
+                    if(input.val() == "") {
+                        label.removeClass("active");
+                    }
+
+                })
+            };
+
+            inputGroup();
 
     	</script>
     </body>

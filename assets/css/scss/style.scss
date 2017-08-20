@@ -1,6 +1,8 @@
 @import "helpers/_var-media-queries";
 @import "helpers/_var-general-functions";
 @import "mixins/_inputPlaceholder";
+@import "mixins/_textEllipsis";
+@import "mixins/_centerFlex";
 @import "general/fonts";
 @import "helpers/_reset";
 
@@ -49,6 +51,8 @@ body {
 @import "components/_menu";
 @import "components/_search";
 @import "components/_headerWhite";
+@import "components/_imgAdd";
+@import "components/_category";
 
 // FORM
 @import "components/_inputGroup";
@@ -63,6 +67,8 @@ body {
 @import "pages/_comments";
 @import "pages/_alerts";
 @import "pages/_favorites";
+@import "pages/_favorites";
+@import "pages/_publish";
 
 
 // UTILITIES

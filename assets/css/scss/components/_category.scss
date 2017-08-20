@@ -1,0 +1,31 @@
+.category {
+    width: 200px;
+    margin: auto;
+}
+
+.category-type {
+    display: inline-block;
+    width: 80px;
+    margin: 6px 0;
+
+    .icon {
+        width: 60px;
+        height: 60px;
+        fill: $grey;
+
+        &.active {
+            fill: $purple;
+        }
+    }
+}
+
+.category-type-name {
+    font-size: 10px;
+    color: $grey;
+    text-transform: uppercase;
+    display: block;
+}
+
+.category {
+    margin: 20px auto 30px;
+}

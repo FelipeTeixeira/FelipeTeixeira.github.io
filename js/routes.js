@@ -64,6 +64,13 @@ angular.module('offy-app')
                 templateUrl: 'views/favorites.html',
                 controller: 'FavoritesController',
                 parent: 'master'
+            })
+
+            .state('publish', {
+                url: "/publish",
+                templateUrl: 'views/publish.html',
+                controller: 'PublishController',
+                parent: 'master'
             });
 
             // $locationProvider.html5Mode(true);
