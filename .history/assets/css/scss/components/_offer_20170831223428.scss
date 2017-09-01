@@ -54,7 +54,8 @@ main.offerMain {
 .offer {
     width: 50%;
     padding: 8px;
-    float: left;
+    display: inline-block;
+    vertical-align: top;
 
     @media (min-width: $phone-large-min) {
         width: 33.3%;
