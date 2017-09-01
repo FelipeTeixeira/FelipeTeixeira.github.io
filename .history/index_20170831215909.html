@@ -134,12 +134,20 @@
             var inputGroup = function () {
                 var input,
                     label;
-                $(document).on("focusin", ".inputGroup-field", function () {
+                $(document).on("focus", ".inputGroup-field", function () {
+                    console.log("maria");
                     input = $(this);
                     label = input.closest(".inputGroup").find(".inputGroup-label");
+
                     label.addClass("active");
-                }).focusout(function () {
-                    if(input && input.val() == "") {
+
+                });
+
+                $(document).on("focusout", ".inputGroup-field", function () {
+                    input = $(this);
+                    label = input.closest(".inputGroup").find(".inputGroup-label");
+                    console.log("maria 2");
+                    if(input.val() == "") {
                         label.removeClass("active");
                     }
                 });

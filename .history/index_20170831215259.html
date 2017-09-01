@@ -134,15 +134,19 @@
             var inputGroup = function () {
                 var input,
                     label;
-                $(document).on("focusin", ".inputGroup-field", function () {
+                $(document).on("focus", ".inputGroup-field", function () {
                     input = $(this);
                     label = input.closest(".inputGroup").find(".inputGroup-label");
+
                     label.addClass("active");
+
                 }).focusout(function () {
-                    if(input && input.val() == "") {
-                        label.removeClass("active");
+
+                    if(input.val() == "") {
+                        console.log("hahaha");
                     }
-                });
+
+                })
             };
             inputGroup();
     	</script>

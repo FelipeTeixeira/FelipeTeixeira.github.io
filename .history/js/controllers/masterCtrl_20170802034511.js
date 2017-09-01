@@ -4,10 +4,9 @@
     angular.module('offy-app')
       .controller('MasterController', MasterController);
 
-    MasterController.$inject = ['$scope', '$location'];
+    MasterController.$inject = ['$scope'];
 
-    function MasterController($scope, $location) {
-        $scope.$location = $location;
+    function MasterController($scope) {
 
         var init = function() {
 

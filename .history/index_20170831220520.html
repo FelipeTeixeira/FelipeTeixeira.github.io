@@ -111,7 +111,7 @@
                     $(document).on("click", ".js-btnSearch", function() {
     					body.addClass("js-search-active");
     					setTimeout(function () {
-    						$("#search-input").focus();
+    						// $("#search-input").focus();
     					}, 130);
     				});
     			};
@@ -137,12 +137,23 @@
                 $(document).on("focusin", ".inputGroup-field", function () {
                     input = $(this);
                     label = input.closest(".inputGroup").find(".inputGroup-label");
+
                     label.addClass("active");
+
                 }).focusout(function () {
-                    if(input && input.val() == "") {
+                    if(input.val() == "") {
                         label.removeClass("active");
                     }
                 });
+
+                // $(document).on("focusout", ".inputGroup-field", function () {
+                //     input = $(this);
+                //     label = input.closest(".inputGroup").find(".inputGroup-label");
+
+                //     if(input.val() == "") {
+                //         label.removeClass("active");
+                //     }
+                // });
             };
             inputGroup();
     	</script>

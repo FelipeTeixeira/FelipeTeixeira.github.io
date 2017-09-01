@@ -35,7 +35,6 @@ angular.module('offy-app')
                 url: "/",
                 templateUrl: 'views/home.html',
                 controller: 'HomeController',
-                controllerAs: 'homeCtrl',
                 parent: 'master'
             })
 

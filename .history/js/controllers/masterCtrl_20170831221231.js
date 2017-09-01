@@ -6,7 +6,7 @@
 
     MasterController.$inject = ['$scope', '$location'];
 
-    function MasterController($scope, $location) {
+    function MasterController($scope) {
         $scope.$location = $location;
 
         var init = function() {

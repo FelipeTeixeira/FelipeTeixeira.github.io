@@ -35,7 +35,6 @@ angular.module('offy-app')
                 url: "/",
                 templateUrl: 'views/home.html',
                 controller: 'HomeController',
-                controllerAs: 'homeCtrl',
                 parent: 'master'
             })
 
@@ -71,13 +70,6 @@ angular.module('offy-app')
                 url: "/publish",
                 templateUrl: 'views/publish.html',
                 controller: 'PublishController',
-                parent: 'master'
-            })
-
-            .state('profile', {
-                url: "/profile",
-                templateUrl: 'views/profile.html',
-                controller: 'ProfileController',
                 parent: 'master'
             });
 
