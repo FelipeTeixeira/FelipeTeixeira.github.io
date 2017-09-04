@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-ng-app="offy-app">
+<html lang="pt-br" data-ng-app="offy-app" manifest="offline.manifest">
 <head>
     <!-- <base href="/"> -->
 
@@ -145,6 +145,10 @@
                 });
             };
             inputGroup();
+
+            if('serviceWorker' in navigator){
+                // navigator.serviceWorker.register('service-worker.js')
+            }
     	</script>
     </body>
 </html>
