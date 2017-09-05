@@ -4,10 +4,11 @@
     angular.module('offy-app')
       .controller('LoginEmailController', LoginEmailController);
 
-    LoginEmailController.$inject = ['$scope'];
+    LoginEmailController.$inject = ['$scope', 'LoginService', '$state'];
 
-    function LoginEmailController($scope) {
-
+    function LoginEmailController($scope, loginService, $state) {
+        var self = this;
+        self.credentials = {};
         var init = function() {
             $scope.inputType = 'password';
 
@@ -20,6 +21,17 @@
                 }, 10);
             };
         };
+
+        self.authenticate = function() {
+          loginService.authenticate(self.credentials)
+            .then(function(user) {
+              $state.go('home');
+            })
+            .catch(function(error) {
+              self.error = error;
+            });
+
+        }
 
         init();
     }

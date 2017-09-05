@@ -21,6 +21,7 @@ angular.module('offy-app')
                 url: "/entrar-email",
                 templateUrl: 'views/loginEmail.html',
                 controller: 'LoginEmailController',
+                controllerAs: 'loginEmailCtrl',
                 parent: 'master'
             })
 
@@ -78,6 +79,7 @@ angular.module('offy-app')
                 url: "/profile",
                 templateUrl: 'views/profile.html',
                 controller: 'ProfileController',
+                controllerAs: 'profileCtrl',
                 parent: 'master'
             });
 
