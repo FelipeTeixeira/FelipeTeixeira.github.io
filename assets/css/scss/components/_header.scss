@@ -10,7 +10,11 @@
 
 	+ main {
 		padding-top: 68px;
-	}
+    }
+
+    .icon {
+        fill: #FFF;
+    }
 }
 
 .header-title {
@@ -18,7 +22,8 @@
 	font-weight: 900;
 	font-size: 18px;
 	text-transform: uppercase;
-	padding: 4px 4px 0;
+    padding: 2px 4px 0;
+    margin-right: auto;
 }
 
 .header-logo {
@@ -33,10 +38,29 @@
 	.icon {
 		width: 20px;
 		height: 20px;
-		fill: #FFF;
 	}
 }
 
-.header-arrowBack {
+// HEADER ACTION
+.header-action {
+    padding: 16px 12px;
+    display: inline-flex;
 
+    .icon {
+        width: 20px;
+        height: 20px;
+        fill: #FFF;
+    }
+}
+
+.header-action-purple {
+    .icon {
+        fill: $purple;
+    }
+}
+
+.header-action-absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
 }

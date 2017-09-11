@@ -44,7 +44,6 @@ body {
 	fill: currentColor;
 }
 
-@import "components/_arrowBack";
 @import "components/_header";
 @import "components/_navCategory";
 @import "components/_offer";
@@ -66,9 +65,9 @@ body {
 @import "pages/_singleOffer";
 @import "pages/_comments";
 @import "pages/_alerts";
-@import "pages/_favorites";
-@import "pages/_favorites";
 @import "pages/_publish";
+@import "pages/_favorites";
+@import "pages/_profileUser";
 
 
 // UTILITIES

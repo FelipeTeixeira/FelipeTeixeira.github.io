@@ -1,5 +1,5 @@
 <header class="header">
-    <a href="#/" class="arrowBack header-arrowBack">
+    <a href="#/" class="header-action">
         <svg class="icon icon-back">
             <use xlink:href="#icon-back"></use>
         </svg>
@@ -9,17 +9,62 @@
         Perfil
     </h1>
 
-    <button class="header-btnSearch js-btnSearch">
-        <svg class="icon icon-search">
-            <use xlink:href="#icon-search"></use>
+    <a href="#comparti" class="header-action singleOfferHeader-shared">
+        <svg class="icon icon-shared">
+            <use xlink:href="#icon-shared"></use>
         </svg>
-    </button>
+    </a>
 
-    <button data-ng-click="profileCtrl.logout()">Sair</button>
+    <a href="#option" class="header-action singleOfferHeader-option">
+        <svg class="icon icon-option">
+            <use xlink:href="#icon-option"></use>
+        </svg>
+    </a>
 </header>
 
-<main>
 
+<main class="profileUserMain">
+    <section class="profileUser">
+        <img src="assets/img/exemplo/perettinha.jpg" alt="Perettinha da Quebrada" class="profileUser-img">
+
+        <div class="profileUser-info">
+            <h2 class="profileUser-name">
+                Felipe Teixeira
+            </h2>
+            <h3 class="profileUser-city">
+                São Paulo - SP
+            </h3>
+
+            <ul class="profileUser-options">
+                <li class="profileUser-options-list">
+                    <svg class="icon icon-tag">
+                        <use xlink:href="#icon-tag"></use>
+                    </svg>
+                    <strong class="profileUser-options-total">
+                        25
+                    </strong>
+                    <strong class="profileUser-options-val  ">
+                        Ofertas
+                    </strong>
+                </li>
+                <li class="profileUser-options-list">
+                    <svg class="icon icon-pig">
+                        <use xlink:href="#icon-pig"></use>
+                    </svg>
+                    <strong class="profileUser-options-total">
+                        105
+                    </strong>
+                    <strong class="profileUser-options-val  ">
+                        Favoritos
+                    </strong>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div data-ng-include="'views/partials/offer-list.html'"></div>
+
+    <button data-ng-click="profileCtrl.logout()">Sair</button>
 </main>
 
 <div data-ng-include="'views/partials/menu.html'"></div>

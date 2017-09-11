@@ -15,7 +15,8 @@ body {
 	font-family: $font;
 	background-color: #f9f4fa;
 	color: $black;
-	overflow-x: hidden;
+    overflow-x: hidden;
+    min-width: 320px;
 }
 
 main {

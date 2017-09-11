@@ -34,7 +34,7 @@
     }
 
     .inputGroup-field {
-        padding: 5px 0;        
+        padding: 5px 0;
         border-bottom: 1px solid #999;
         width: 100%;
     }
@@ -47,7 +47,7 @@
         height: 16px;
 
         + .inputGroup-field {
-            padding-left: 26px;
+            padding: 10px 10px 10px 26px;
         }
 
         &.icon-right {

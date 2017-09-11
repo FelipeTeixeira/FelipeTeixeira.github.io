@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-ng-app="offy-app" manifest="offline.manifest">
+<!-- <html lang="pt-br" data-ng-app="offy-app"> -->
 <head>
     <!-- <base href="/"> -->
 
@@ -27,6 +28,11 @@
 
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        if('serviceWorker' in navigator){
+            // navigator.serviceWorker.register('service-worker.js')
+        }
+    </script>
 
     <script src="lib/angular.min.js"></script>
     <script src="lib/angular-ui-router.min.js"></script>
@@ -147,9 +153,7 @@
             };
             inputGroup();
 
-            if('serviceWorker' in navigator){
-                // navigator.serviceWorker.register('service-worker.js')
-            }
+
     	</script>
     </body>
 </html>

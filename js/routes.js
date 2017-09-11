@@ -78,8 +78,8 @@ angular.module('offy-app')
             .state('profile', {
                 url: "/profile",
                 templateUrl: 'views/profile.html',
-                controller: 'ProfileController',
-                controllerAs: 'profileCtrl',
+                controller: 'HomeController',
+                controllerAs: 'homeCtrl',
                 parent: 'master'
             });
 

@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-#v9
+#v8
 
 CACHE:
 assets/css/style.css
@@ -19,6 +19,7 @@ js/controllers/publishCtrl.js
 js/controllers/profileCtrl.js
 js/controllers/alertsCtrl.js
 js/services/offerService.js
+js/services/loginService.js
 assets/js/zepto.min.js
 views/alerts.html
 views/comments.html
