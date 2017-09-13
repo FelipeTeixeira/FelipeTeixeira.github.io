@@ -4,9 +4,10 @@
     angular.module('offy-app')
       .controller('LoginCreateAccountController', LoginCreateAccountController);
 
-    LoginCreateAccountController.$inject = ['$scope'];
+    LoginCreateAccountController.$inject = ['$scope', 'UserService', '$state'];
 
-    function LoginCreateAccountController($scope) {
+    function LoginCreateAccountController($scope, userService, $state) {
+        var self = this;
 
         var init = function() {
             $scope.inputType = 'password';
@@ -20,6 +21,19 @@
                 }, 10);
             };
         };
+
+        self.submit = function() {
+            if (!self.user) return;
+
+            userService.create(self.user)
+                .then(function(response) {
+                    $state.go('home');
+                })
+                .catch(function(error) {
+                    self.error = error;
+                })
+
+        }
 
         init();
     }

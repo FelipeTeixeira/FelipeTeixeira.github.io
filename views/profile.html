@@ -25,11 +25,12 @@
 
 <main class="profileUserMain">
     <section class="profileUser">
-        <img src="assets/img/exemplo/perettinha.jpg" alt="Perettinha da Quebrada" class="profileUser-img">
+        <img src="{{profileCtrl.user.facebook.picture}}" alt="{{profileCtrl.user.facebook.name}}"
+        class="profileUser-img">
 
         <div class="profileUser-info">
             <h2 class="profileUser-name">
-                Felipe Teixeira
+                {{profileCtrl.user.facebook.name}}
             </h2>
             <h3 class="profileUser-city">
                 São Paulo - SP

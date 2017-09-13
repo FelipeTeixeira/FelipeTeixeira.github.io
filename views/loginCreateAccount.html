@@ -11,26 +11,27 @@
         </svg>
     </a>
 
-    <form action="#" autocomplete="off">
+    <form name="accountForm" data-ng-submit="createAccountCtrl.submit()" autocomplete="off" novalidate>
+        {{createAccountCtrl.error}}
         <div class="inputGroup loginCreateAccount-inputGroup">
             <svg class="icon icon-menu-user">
                 <use xlink:href="#icon-menu-user"></use>
             </svg>
-            <input type="text" class="inputGroup-field" placeholder="seu nome">
+            <input type="text" required data-ng-model="createAccountCtrl.user.name" class="inputGroup-field" placeholder="seu nome">
         </div>
 
         <div class="inputGroup loginCreateAccount-inputGroup">
             <svg class="icon icon-email">
                 <use xlink:href="#icon-email"></use>
             </svg>
-            <input type="email" class="inputGroup-field" placeholder="seu e-mail">
+            <input type="email" required data-ng-model="createAccountCtrl.user.email" class="inputGroup-field" placeholder="seu e-mail">
         </div>
 
         <div class="inputGroup loginCreateAccount-inputGroup">
             <svg class="icon icon-password">
                 <use xlink:href="#icon-password"></use>
             </svg>
-            <input type="{{inputType}}" id="login-password" class="inputGroup-field" placeholder="defina uma senha" autocomplete="new-password">
+            <input type="{{inputType}}" required id="login-password" data-ng-model="createAccountCtrl.user.password" class="inputGroup-field" placeholder="defina uma senha" autocomplete="new-password">
             <svg class="icon icon-eye icon-right" ng-click="hideShowPassword()">
                 <use xlink:href="#icon-eye"></use>
             </svg>
@@ -43,7 +44,7 @@
             </label>
         </div>
 
-        <button type="button" class="btn btn-purple loginCreateAccount-btnCreate">
+        <button data-ng-disabled="accountForm.$invalid" type="submit" class="btn btn-purple loginCreateAccount-btnCreate">
             Criar Conta
         </button>
 

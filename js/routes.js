@@ -29,6 +29,7 @@ angular.module('offy-app')
                 url: "/criar-conta",
                 templateUrl: 'views/loginCreateAccount.html',
                 controller: 'LoginCreateAccountController',
+                controllerAs: 'createAccountCtrl',
                 parent: 'master'
             })
 
@@ -78,8 +79,8 @@ angular.module('offy-app')
             .state('profile', {
                 url: "/profile",
                 templateUrl: 'views/profile.html',
-                controller: 'HomeController',
-                controllerAs: 'homeCtrl',
+                controller: 'ProfileController',
+                controllerAs: 'profileCtrl',
                 parent: 'master'
             });
 

@@ -8,8 +8,10 @@
 
     function ProfileController($scope, loginService, $state) {
         var self = this;
-        var init = function() {
 
+        var init = function() {
+            console.log('current user', loginService.currentUser);
+            self.user = loginService.currentUser();
         };
 
         self.logout = function() {

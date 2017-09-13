@@ -11,7 +11,7 @@
         var near = function(location) {
           return $http({
             method: 'POST',
-            url: 'https://promocial.herokuapp.com/api/promos/near',
+            url: 'http://localhost:3003/api/promos/near',
             data: location
           });
         };
