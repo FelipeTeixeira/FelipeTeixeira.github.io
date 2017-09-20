@@ -1,5 +1,5 @@
 <section class="offer-list clear">
-    <h2 class="offer-distance js-offer-distance">
+    <h2 class="offer-distance js-offer-distance" data-ng-show="homeCtrl.getLocationAvaialable">
         <svg class="icon icon-location">
             <use xlink:href="#icon-location"></use>
         </svg>
@@ -9,7 +9,7 @@
     <ul>
         <li class="offer" data-ng-repeat="offer in homeCtrl.offers">
             <a href="#/offer">
-                <img data-ng-src="{{offer.imageLowUrl}}" alt="{{offer.description}}" class="offer-img">
+                <img data-ng-src="{{offer.file.imageLowUrl}}" alt="{{offer.description}}" class="offer-img">
             </a>
 
             <div class="offer-body">
