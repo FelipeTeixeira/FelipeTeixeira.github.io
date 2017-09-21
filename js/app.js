@@ -12,7 +12,7 @@
     $transitions.onStart({to: ['profile', 'favorites', 'publish', 'alerts']}, function(trans) {
         var loginService = trans.injector().get('LoginService');
         if (!loginService.isAuthenticated()) {
-            return trans.router.stateService.target('login');
+            // return trans.router.stateService.target('login');
         }
     });
     // if user is authenticated take him to home page

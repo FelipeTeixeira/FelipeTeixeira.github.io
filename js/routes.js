@@ -5,7 +5,8 @@ angular.module('offy-app')
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         function($stateProvider, $urlRouterProvider, $locationProvider) {
 
-            $urlRouterProvider.otherwise("/login");
+            $locationProvider.html5Mode(true);
+            $urlRouterProvider.otherwise("/");
 
             $stateProvider
             .state('master', {
@@ -84,7 +85,7 @@ angular.module('offy-app')
                 parent: 'master'
             });
 
-            // $locationProvider.html5Mode(true);
+
         }
     ]);
 })();
