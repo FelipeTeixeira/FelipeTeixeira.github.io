@@ -5,7 +5,7 @@
 
     <img src="assets/img/offy-logo.svg" alt="Offy - caminho mais curto para os descontos" width="164">
 
-    <a href="#/login" class="header-action header-action-absolute">
+    <a href="/login" class="header-action header-action-absolute">
         <svg class="icon icon-back">
             <use xlink:href="#icon-back"></use>
         </svg>
@@ -23,12 +23,12 @@
                 <use xlink:href="#icon-password"></use>
             </svg>
             <input type="{{inputType}}" data-ng-model="loginEmailCtrl.credentials.password" id="login-password" class="inputGroup-field" placeholder="sua senha" autocomplete="new-password">
-            <svg class="icon icon-eye icon-right" ng-click="hideShowPassword()">
+            <svg class="icon icon-eye icon-right" data-ng-click="hideShowPassword()">
                 <use xlink:href="#icon-eye"></use>
             </svg>
         </div>
 
-        <a href="#/" class="login-forgotPassword">
+        <a href="/" class="login-forgotPassword">
             Esqueci minha senha
         </a>
 
@@ -36,7 +36,7 @@
             Entrar
         </button>
 
-        <a href="#/criar-conta" class="login-notAccount">
+        <a href="/criar-conta" class="login-notAccount">
             Não tenho conta
         </a>
 

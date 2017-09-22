@@ -1,0 +1,87 @@
+<header class="publishHeader">
+    <a href="/" class="header-action header-action-purple">
+        <svg class="icon icon-back">
+            <use xlink:href="#icon-back"></use>
+        </svg>
+    </a>
+
+    <a href="#" class="publishHeader-action">
+        <svg class="icon icon-clear">
+            <use xlink:href="#icon-clear"></use>
+        </svg>
+    </a>
+    <a href="#" class="publishHeader-action">
+        <svg class="icon icon-repeat">
+            <use xlink:href="#icon-repeat"></use>
+        </svg>
+    </a>
+    <a href="#" class="publishHeader-action">
+        <svg class="icon icon-check">
+            <use xlink:href="#icon-check"></use>
+        </svg>
+    </a>
+</header>
+
+<main class="publishMain">
+
+    <section class="publish-progress">
+        <svg class="icon icon-pig">
+            <use xlink:href="#icon-pig"></use>
+        </svg>
+
+        <span class="publish-progress-iconHidden" data-ng-class="{'publish-progress-iconHidden-2': step1Ctrl.hasImage}">
+            <svg class="icon icon-pig">
+                <use xlink:href="#icon-pig"></use>
+            </svg>
+        </span>
+    </section>
+
+
+
+    <section class="publish publishStep-maxWidth" data-ng-show="!step1Ctrl.hasImage">
+
+        <h1 class="publish-title">
+            Boa! Uma oferta!
+        </h1>
+
+        <h2 class="publish-subtitle">
+            Primeiro, tire uma foto do produto com a etiqueta do preço
+            indicando a promoção:
+        </h2>
+
+
+        <label class="imgAdd">
+            <input type="file" id="offer-image-file">
+
+            <svg class="icon icon-add-photo">
+                <use xlink:href="#icon-add-photo"></use>
+            </svg>
+        </label>
+
+        <button class="btn btn-purple" ui-sref="publishTwoStep" data-ng-disabled="!step1Ctrl.hasImage">
+            Próxima etapa!
+        </button>
+
+    </section>
+
+    <!-- IMG LOAD SHOW -->
+    <section class="publish publishStep-maxWidth" data-ng-show="step1Ctrl.hasImage">
+
+        <h1 class="publish-title">
+            Aí sim!
+        </h1>
+
+        <h2 class="publish-subtitle">
+            Tudo certo? A foto do produto mostra a
+            etiqueta do preço indicando a promoção
+        </h2>
+
+        <img id="offer-image" alt="Oferta" class="publish-imgOffer">
+
+        <button class="btn btn-purple" ui-sref="publishTwoStep">
+            Próxima etapa!
+        </button>
+
+    </section>
+
+</main>

@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     margin: 24px auto 30px;
+    cursor: pointer;
 
     .icon {
         width: 56px;
@@ -13,5 +14,9 @@
         fill: $purple;
         position: relative;
         left: 5px;
+    }
+
+    input {
+        display: none;
     }
 }

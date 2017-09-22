@@ -10,6 +10,7 @@
     padding: 12px;
     width: 100%;
     display: block;
+    cursor: pointer;
 
     .icon {
         width: 16px;
@@ -17,6 +18,11 @@
         position: relative;
         top: 4px;
         margin-right: 4px;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.6;
     }
 }
 

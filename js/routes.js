@@ -57,28 +57,49 @@ angular.module('offy-app')
             })
 
             .state('alerts', {
-                url: "/alerts",
+                url: "/alertas",
                 templateUrl: 'views/alerts.html',
                 controller: 'AlertsController',
                 parent: 'master'
             })
 
             .state('favorites', {
-                url: "/favorites",
+                url: "/favoritos",
                 templateUrl: 'views/favorites.html',
                 controller: 'FavoritesController',
                 parent: 'master'
             })
 
-            .state('publish', {
-                url: "/publish",
-                templateUrl: 'views/publish.html',
+            // PUBLISH
+            // 1 STEP
+            .state('publishOneStep', {
+                url: "/publicar/etapa-1",
+                templateUrl: 'views/partials/publish/1-step-photo.html',
+                controller: 'PublishStepOneController',
+                controllerAs: 'step1Ctrl',
+                parent: 'master'
+            })
+
+            // 2 STEP
+            .state('publishTwoStep', {
+                url: "/publicar/etapa-2",
+                templateUrl: 'views/partials/publish/2-step-category.html',
                 controller: 'PublishController',
                 parent: 'master'
             })
 
+            // 3 STEP
+            .state('publishThreeStep', {
+                url: "/publicar/etapa-3",
+                templateUrl: 'views/partials/publish/3-step-info.html',
+                controller: 'PublishController',
+                controllerAs: 'step3Ctrl',
+                parent: 'master'
+            })
+            //! PUBLISH
+
             .state('profile', {
-                url: "/profile",
+                url: "/perfil",
                 templateUrl: 'views/profile.html',
                 controller: 'ProfileController',
                 controllerAs: 'profileCtrl',
