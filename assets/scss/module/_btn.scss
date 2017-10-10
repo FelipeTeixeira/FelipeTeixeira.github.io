@@ -1,0 +1,45 @@
+.btn {
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #FFF;
+    border: 1px #d5dce0 solid;
+
+    &.btn-blue {
+        color: $color-blue;
+        border-color: $color-blue;
+    }
+
+    &:hover {
+        color: $color-orange;
+        border-color: $color-orange;
+    }
+}
+
+// BTN TYPE - CIRCLE
+.btnCircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    @include widthHeight(30px);
+    border: 1px solid #b8c0c6;
+    border-radius: 50%;
+
+    .icon {
+        fill: #bdc4ca;
+        @include widthHeight(14px);
+    }
+
+    &.btnCircle--dashed {
+        border-style: dashed;
+    }
+
+    &:hover {
+        border-color: $color-blue;
+
+        .icon {
+            fill: $color-blue;
+        }
+    }
+}
