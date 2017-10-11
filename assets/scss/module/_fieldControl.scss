@@ -12,6 +12,10 @@
         &:hover {
             border-color: #d5dce0;
         }
+
+        &.fieldControl-field--error {
+            border-color: #e03f50;
+        }
     }
 
     &.fieldControl--icon {

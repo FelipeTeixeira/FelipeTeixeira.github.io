@@ -16,18 +16,16 @@
 
     animation: animacao .5s ease-in 2s forwards;
     transition: all .2s ease;
-
-    display: none;
 }
 
-// @-webkit-keyframes animacao {
-//     from {
-//         transition: transform .2s ease;
-//         opacity: 10;
-//         visibility: visible;
-//     }
-//     to {
-//         opacity: 0;
-//         visibility: hidden;
-//     }
-// }
+@-webkit-keyframes animacao {
+    from {
+        transition: transform .2s ease;
+        opacity: 10;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

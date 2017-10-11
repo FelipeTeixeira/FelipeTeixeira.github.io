@@ -7,13 +7,13 @@ class ListView extends View {
     template(model) {
 
         return `
-            ${model.tasks.map(n => `
+            ${model.tasks.map(item => `
 
-                <li onclick="taskController.edit(${n.id}, '${n.taskTitle}', '${n.description}')">
+                <li onclick="taskController.editOpen(${item.id})">
                     <svg class="icon icon-check">
                         <use xlink:href="#icon-check"></use>
                     </svg>
-                    ${n.taskTitle} -- ${n.id}
+                    ${item.taskTitle} -- ${item.id} * ${item.description} *
                 </li>
 
             `).join('')}
