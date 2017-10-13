@@ -9,12 +9,13 @@
 body {
 	max-width: 480px;
 	display: block;
-	margin: auto;
+    margin: auto;
 
 	.header,
 	.menu,
 	.headerWhite,
-	.commentsAdd {
+    .commentsAdd,
+    .publishAutocomplete {
 		max-width: 480px;
 		margin: auto;
 		left: 0;

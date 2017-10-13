@@ -1,7 +1,7 @@
 {
     "name": "Offy",
     "short_name": "Offy",
-    "start_url": "/#",
+    "start_url": "/",
     "display": "standalone",
     "orientation": "portrait",
     "theme_color": "#8c2898",

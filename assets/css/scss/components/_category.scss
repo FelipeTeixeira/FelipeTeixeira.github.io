@@ -13,9 +13,27 @@
         width: 60px;
         height: 60px;
         fill: $grey;
+        // DEPOIS MELHORAR, remover borda do SVG e deixar no CSS
+        transition: all 0.2s ease;
 
-        &.active {
-            fill: $purple;
+    }
+
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    input {
+        display: none;
+
+        &:checked {
+            + .icon {
+                fill: $purple;
+
+                + .category-type-name {
+                    color: $purple;
+                }
+            }
         }
     }
 }
@@ -25,6 +43,7 @@
     color: $grey;
     text-transform: uppercase;
     display: block;
+    transition: color 0.2s ease;
 }
 
 .category {

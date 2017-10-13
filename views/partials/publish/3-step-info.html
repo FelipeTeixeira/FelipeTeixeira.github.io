@@ -5,22 +5,6 @@
             <use xlink:href="#icon-back"></use>
         </svg>
     </a>
-
-    <a href="#" class="publishHeader-action">
-        <svg class="icon icon-clear">
-            <use xlink:href="#icon-clear"></use>
-        </svg>
-    </a>
-    <a href="#" class="publishHeader-action">
-        <svg class="icon icon-repeat">
-            <use xlink:href="#icon-repeat"></use>
-        </svg>
-    </a>
-    <a href="#" class="publishHeader-action">
-        <svg class="icon icon-check">
-            <use xlink:href="#icon-check"></use>
-        </svg>
-    </a>
 </header>
 
 <main class="publishMain">
@@ -59,11 +43,6 @@
                         <use xlink:href="#icon-repeat"></use>
                     </svg>
                 </button>
-                <button class="btnCircle">
-                    <svg class="icon icon-clear">
-                        <use xlink:href="#icon-clear"></use>
-                    </svg>
-                </button>
             </div>
         </section>
 
@@ -95,16 +74,14 @@
 
         </section>
 
-        <input id="pac-input" class="controls" type="text"
-        placeholder="Digite a localização">
-
         <div class="publish-location">
-            <button class="btn btn-white" data-ng-show="step3Ctrl.place">
+            <a href="#location" class="btn btn-white js-publishAutocomplete-open">
                 <svg class="icon icon-map">
                     <use xlink:href="#icon-map"></use>
                 </svg>
                 {{step3Ctrl.place.name}}
-            </button>
+                Definir Local da Oferta
+            </a>
         </div>
 
         <button class="btn btn-purple publishStep-maxWidth" type="submit">
@@ -114,3 +91,19 @@
     </section>
 
 </main>
+
+<div id="location" class="publishAutocomplete" data-ng-class="{'active': publishAutocomplete}">
+
+    <header class="publishHeader">
+        <a href="/publicar/etapa-3#" class="header-action header-action-purple" data-ng-click="publishAutocomplete = false">
+            <svg class="icon icon-back">
+                <use xlink:href="#icon-back"></use>
+            </svg>
+        </a>
+    </header>
+
+    <section>
+        <input id="pac-input" class="publishAutocomplete-field" type="search"
+        placeholder="Digite a localização...">
+    </section>
+</div>
