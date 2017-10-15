@@ -79,20 +79,24 @@
                 <svg class="icon icon-map">
                     <use xlink:href="#icon-map"></use>
                 </svg>
-                {{step3Ctrl.place.name}}
-                Definir Local da Oferta
+                <span ng-show="step3Ctrl.place.name">
+                    {{step3Ctrl.place.name}}
+                </span>
+                <span ng-show="!step3Ctrl.place.name">
+                    Definir Local da Oferta
+                </span>
             </a>
         </div>
 
-        <button class="btn btn-purple publishStep-maxWidth" type="submit">
+        <a href="/publicar/etapa-sucesso" class="btn btn-purple publishStep-maxWidth">
             Publicar Oferta!
-        </button>
+        </a>
 
     </section>
 
 </main>
 
-<div id="location" class="publishAutocomplete" data-ng-class="{'active': publishAutocomplete}">
+<aside class="publishAutocomplete" data-ng-class="{'active': publishAutocomplete}">
 
     <header class="publishHeader">
         <a href="/publicar/etapa-3#" class="header-action header-action-purple" data-ng-click="publishAutocomplete = false">
@@ -106,4 +110,4 @@
         <input id="pac-input" class="publishAutocomplete-field" type="search"
         placeholder="Digite a localização...">
     </section>
-</div>
+</aside>

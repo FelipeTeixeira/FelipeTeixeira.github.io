@@ -11,6 +11,7 @@
         var self = this;
 
         var init = function () {
+            window.scrollTo(0,0);
         };
 
         var initMap = function () {

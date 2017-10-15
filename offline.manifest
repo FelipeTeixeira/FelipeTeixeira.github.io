@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-#v101
+#v99
 
 CACHE:
 assets/css/style.css
@@ -37,6 +37,11 @@ views/partials/navCategory.html
 views/partials/offer-list.html
 views/partials/search.html
 views/partials/svg.html
+views/partials/publish/1-step-photo.html
+views/partials/publish/2-step-category.html
+views/partials/publish/3-step-info.html
+views/partials/publish/4-step-success.html
+
 assets/img/offy-logo.svg
 assets/fonts/nunito-v8-latin-900.woff
 assets/fonts/nunito-v8-latin-700.woff

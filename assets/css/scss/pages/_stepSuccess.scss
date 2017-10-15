@@ -1,0 +1,113 @@
+$widthStep: 262px;
+
+.stepSuccessMain {
+    min-height: 100vh;
+    background: linear-gradient(135deg,  #8b2898 0%,#7a2e9a 31%, #483ea0 70%, #4f3c9f 80%, #463fa0 90%, #124fa6 100%);
+}
+
+.stepSuccess-close {
+    float: right;
+    padding: 16px;
+    margin-bottom: 26px;
+    display: block;
+
+    .icon {
+        fill: #FFF;
+    }
+}
+
+.stepSuccess-product {
+    text-align: center;
+    background-color: #FFF;
+    width: $widthStep;
+    margin: auto;
+    border-radius: 20px;
+    padding: 54px 0 20px;
+    position: relative;
+    clear: both;
+}
+
+.stepSuccess-product-icons {
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    background-color: $purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #FFF;
+    position: absolute;
+    top: -32px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    .icon-pig {
+        fill: #FFF;
+        width: 38px;
+        height: 38px;
+    }
+
+    .icon-check {
+        width: 26px;
+        height: 26px;
+        background-color: #48ed83;
+        border-radius: 50%;
+        padding: 6px 0;
+        fill: #FFF;
+        position: absolute;
+        top: 0;
+        right: -12px;
+    }
+}
+
+.stepSuccess-product-title {
+    font-size: 18px;
+    display: inline-block;
+}
+
+.stepSuccess-product-subtitle {
+    font-size: 14px;
+    font-weight: normal;
+    width: 170px;
+    margin: auto;
+}
+
+.stepSuccess-product-val {
+    font-size: 12px;
+    color: $purple;
+}
+
+.stepSuccess-product-name {
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 10px;
+}
+
+.stepSuccess-product-location {
+    font-size: 12px;
+    text-decoration: underline;
+    position: relative;
+    padding: 4px 14px;
+    display: inline-block;
+
+    .icon {
+        position: absolute;
+        left: 0;
+        top: 6px;
+    }
+}
+
+.stepSuccess-product-imgProduct {
+    width: 158px;
+    height: 158px;
+    border-radius: 10px;
+    margin: 30px auto 10px;
+    display: block;
+}
+
+.stepSuccess-product-btnShared {
+    width: $widthStep;
+    margin: 16px auto;
+}
+

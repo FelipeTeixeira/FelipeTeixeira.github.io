@@ -96,6 +96,13 @@ angular.module('offy-app')
                 controllerAs: 'step3Ctrl',
                 parent: 'master'
             })
+
+             // 4 STEP SUCESS
+             .state('publishFourStep', {
+                url: "/publicar/etapa-sucesso",
+                templateUrl: 'views/partials/publish/4-step-success.html',
+                parent: 'master'
+            })
             //! PUBLISH
 
             .state('profile', {

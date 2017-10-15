@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- <html lang="pt-br" data-ng-app="offy-app" manifest="offline.manifest"> -->
-<html lang="pt-br" data-ng-app="offy-app">
+<html lang="pt-br" data-ng-app="offy-app" manifest="offline.manifest">
 <head>
     <base href="/">
 
@@ -170,6 +169,7 @@
             $(document).on("click", ".js-publishAutocomplete-open", function() {
                 $(".publishAutocomplete").addClass("active");
                 $("body").addClass("location-active");
+                $("#pac-input").focus();
             });
 
             $(document).on("click", ".pac-container", function(e) {
