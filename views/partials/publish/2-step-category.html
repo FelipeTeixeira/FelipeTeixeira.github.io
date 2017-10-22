@@ -34,7 +34,7 @@
         <ul class="category">
             <li class="category-type">
                 <label>
-                    <input type="radio" name="categoryType" id="">
+                    <input type="radio" name="categoryType" data-ng-model="stepTwoCtrl.category" value="alimentos" id="">
                     <svg class="icon icon-cat-food">
                         <use xlink:href="#icon-cat-food"></use>
                     </svg>
@@ -45,7 +45,7 @@
             </li>
             <li class="category-type">
                 <label>
-                    <input type="radio" name="categoryType" id="">
+                    <input type="radio" name="categoryType" data-ng-model="stepTwoCtrl.category" value="bebidas" id="">
                     <svg class="icon icon-cat-drink">
                         <use xlink:href="#icon-cat-drink"></use>
                     </svg>
@@ -56,7 +56,7 @@
             </li>
             <li class="category-type">
                 <label>
-                    <input type="radio" name="categoryType" id="">
+                    <input type="radio" name="categoryType" data-ng-model="stepTwoCtrl.category" value="calcados" id="">
                     <svg class="icon icon-cat-shoe">
                         <use xlink:href="#icon-cat-shoe"></use>
                     </svg>
@@ -67,7 +67,7 @@
             </li>
             <li class="category-type">
                 <label>
-                    <input type="radio" name="categoryType" id="">
+                    <input type="radio" name="categoryType" data-ng-model="stepTwoCtrl.category" value="casa" id="">
                     <svg class="icon icon-cat-home">
                         <use xlink:href="#icon-cat-home"></use>
                     </svg>
@@ -78,7 +78,7 @@
             </li>
             <li class="category-type">
                 <label>
-                    <input type="radio" name="categoryType" id="">
+                    <input type="radio" name="categoryType" data-ng-model="stepTwoCtrl.category" value="eletronicos"  id="">
                     <svg class="icon icon-cat-electronic">
                         <use xlink:href="#icon-cat-electronic"></use>
                     </svg>
@@ -89,7 +89,7 @@
             </li>
             <li class="category-type">
                 <label>
-                    <input type="radio" name="categoryType" id="">
+                    <input type="radio" name="categoryType" data-ng-model="stepTwoCtrl.category" value="games"  id="">
                     <svg class="icon icon-cat-game">
                         <use xlink:href="#icon-cat-game"></use>
                     </svg>
@@ -101,7 +101,7 @@
 
         </ul>
 
-        <button class="btn btn-purple" ui-sref="publishThreeStep">
+        <button class="btn btn-purple" data-ng-click="stepTwoCtrl.next()" data-ng-disabled="!stepTwoCtrl.category">
             Próxima etapa!
         </button>
 

@@ -7,7 +7,6 @@
 </header>
 
 <main class="publishMain">
-
     <section class="publish-progress">
         <svg class="icon icon-pig">
             <use xlink:href="#icon-pig"></use>
@@ -19,8 +18,6 @@
             </svg>
         </span>
     </section>
-
-
 
     <section class="publish publishStep-maxWidth" data-ng-show="!step1Ctrl.hasImage">
 
@@ -35,7 +32,7 @@
 
 
         <label class="imgAdd">
-            <input type="file" id="offer-image-file">
+            <input type="file" id="offer-image-file" accept="image/*">
 
             <svg class="icon icon-add-photo">
                 <use xlink:href="#icon-add-photo"></use>
@@ -49,23 +46,36 @@
     </section>
 
     <!-- IMG LOAD SHOW -->
-    <section class="publish publishStep-maxWidth" data-ng-show="step1Ctrl.hasImage">
+    <section class="publish" data-ng-show="step1Ctrl.hasImage">
 
-        <h1 class="publish-title">
+        <h1 class="publish-title publishStep-maxWidth">
             Aí sim!
         </h1>
 
-        <h2 class="publish-subtitle">
+        <h2 class="publish-subtitle publishStep-maxWidth">
             Tudo certo? A foto do produto mostra a
             etiqueta do preço indicando a promoção
         </h2>
 
-        <img id="offer-image" alt="Oferta" class="publish-imgOffer">
+        <figure class="publish-imgOffer">
+            <image-cropper
+                image-url="assets/img/exemplo/itaipava.jpg"
+                show-controls="false"
 
-        <button class="btn btn-purple" ui-sref="publishTwoStep">
+                center-on-init="true"
+                api="step1Ctrl.cropperApi"
+                crop-callback="step1Ctrl.updateResultImage"
+                action-labels="step1Ctrl.myButtonLabels">
+            </image-cropper>
+        </figure>
+
+
+        <button class="btn btn-purple publishStep-maxWidth" ui-sref="publishTwoStep">
             Próxima etapa!
         </button>
 
     </section>
 
 </main>
+
+<!-- https://github.com/bcabanes/angular-image-cropper -->

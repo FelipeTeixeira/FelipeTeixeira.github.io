@@ -4,14 +4,14 @@
     angular.module('offy-app')
         .factory('OfferService', OfferService);
 
-    OfferService.$inject = ['$http'];
+    OfferService.$inject = ['$http', 'config'];
 
-    function OfferService($http) {
+    function OfferService($http, config) {
 
         var near = function (location) {
             return $http({
                 method: 'POST',
-                url: 'https://promocial.herokuapp.com/api/promos/near',
+                url: config.apiUrl + "/api/promos/near",
                 data: location
             });
         };
@@ -19,7 +19,7 @@
         var offers = function () {
             return $http({
                 method: 'GET',
-                url: 'https://promocial.herokuapp.com/api/promos/'
+                url: baseUrl + "api/promos/"
             });
         }
 

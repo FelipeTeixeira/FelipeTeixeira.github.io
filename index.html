@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-ng-app="offy-app" manifest="offline.manifest">
+<!-- <html lang="pt-br" data-ng-app="offy-app" manifest="offline.manifest"> -->
+<html lang="pt-br" data-ng-app="offy-app">
 <head>
     <base href="/">
 
@@ -49,6 +50,8 @@
     <script src="js/controllers/favoritesCtrl.js"></script>
     <script src="js/controllers/publishCtrl.js"></script>
     <script src="js/controllers/publishStepOneCtrl.js"></script>
+    <script src="js/controllers/publishStepTwoCtrl.js"></script>
+    <script src="js/controllers/publishSuccessCtrl.js"></script>
     <script src="js/controllers/profileCtrl.js"></script>
 
     <script src="js/controllers/alertsCtrl.js"></script>
@@ -58,6 +61,7 @@
     <script src="js/services/loginService.js"></script>
     <script src="js/services/userService.js"></script>
     <script src="js/services/geoLocationService.js"></script>
+    <script src="js/services/publishService.js"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4Z0OkIu20yfKBTbmAF0Sou2bqHmkv48&libraries=places"
     async defer></script>
@@ -69,7 +73,8 @@
         <div data-ui-view></div>
         <div data-ng-include="'views/partials/search.html'"></div>
 
-        <script src="assets/js/zepto.min.js"></script>
+        <script src="lib/jquery.js"></script>
+        <script src="lib/angular-image-cropper.js"></script>
     	<script type="text/javascript">
     		var body = $("body");
 
@@ -177,6 +182,9 @@
                 $(".publishAutocomplete").removeClass("active");
                 $("body").removeClass("location-active");
             });
+
+
+
 
     	</script>
     </body>

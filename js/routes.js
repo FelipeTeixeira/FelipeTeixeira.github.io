@@ -84,7 +84,8 @@ angular.module('offy-app')
             .state('publishTwoStep', {
                 url: "/publicar/etapa-2",
                 templateUrl: 'views/partials/publish/2-step-category.html',
-                controller: 'PublishController',
+                controller: 'PublishStepTwoController',
+                controllerAs: 'stepTwoCtrl',
                 parent: 'master'
             })
 
@@ -101,6 +102,8 @@ angular.module('offy-app')
              .state('publishFourStep', {
                 url: "/publicar/etapa-sucesso",
                 templateUrl: 'views/partials/publish/4-step-success.html',
+                controller: 'PublishSuccessController',
+                controllerAs: 'publishSuccessCtrl',
                 parent: 'master'
             })
             //! PUBLISH

@@ -4,9 +4,9 @@
     angular.module('offy-app')
         .factory('LoginService', LoginService);
 
-    LoginService.$inject = ['$http', '$q', '$window'];
+    LoginService.$inject = ['$http', '$q', '$window', 'config'];
 
-    function LoginService($http, $q, $window) {
+    function LoginService($http, $q, $window, config) {
 
         var user = null;
 
@@ -16,7 +16,7 @@
 
             $http({
                 method: 'POST',
-                url: 'https://promocial.herokuapp.com/api/auth',
+                url: config.apiUrl + '/api/auth',
                 data: credentials
             })
             .then(function (response) {
