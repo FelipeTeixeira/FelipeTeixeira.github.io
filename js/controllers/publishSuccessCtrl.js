@@ -14,12 +14,11 @@
             self.offerData = publishService.offer();
             console.log(self.offerData);
 
-            var reader = new FileReader();
-            reader.readAsDataURL(self.offerData.image);
+            //var reader = new FileReader();
+            //reader.readAsDataURL(self.offerData.image);
 
-            reader.onload = function (e) {
-                $('.stepSuccess-product-imgProduct').attr('src', e.target.result);
-            }
+            //reader.onload = function (e) {
+                $('.stepSuccess-product-imgProduct').attr('src', self.offerData.image);
         };
 
         init();

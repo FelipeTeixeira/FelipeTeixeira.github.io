@@ -1,12 +1,13 @@
+
 (function () {
     'use strict';
 
     angular.module('offy-app')
         .controller('PublishStepOneController', PublishStepOneController);
 
-    PublishStepOneController.$inject = ['$scope', 'PublishService', '$timeout'];
+    PublishStepOneController.$inject = ['$scope', 'PublishService', '$timeout', '$state'];
 
-    function PublishStepOneController($scope, publishService, $timeout) {
+    function PublishStepOneController($scope, publishService, $timeout, $state) {
 
         var self = this;
 
@@ -46,21 +47,31 @@
             }
         }
 
-
+        self.crop = function() {
+            console.log(self.cropImage);
+            var result = self.cropImage.crop();
+            console.log(result);
+            publishService.image(result);
+            $state.go('publishTwoStep');
+        };
 
         self.updateResultImage = function(base64) {
             self.resultImage = base64;
-                  $scope.$apply(); // Apply the changes.
-                };
+            //$scope.$apply(); // Apply the changes.
+        };
 
-                // Cropper API available when image is ready.
-                //vm.cropperApi = function(cropperApi) {
-                //  cropperApi.zoom(3);
-                //  cropperApi.rotate(270);
-                //  cropperApi.fit();
-                //  vm.resultImage = cropperApi.crop();
-                //  $scope.$apply(); // Apply the changes.
-                //};
+
+        // Cropper API available when image is ready.
+        self.cropperApi = function(cropperApi) {
+            console.log('cropper api is ready');
+            //cropperApi.zoom(3);
+            //ropperApi.rotate(270);
+            //cropperApi.fit();
+            self.cropImage = cropperApi;
+            self.resultImage = cropperApi.crop();
+            //$('#cropped-image').attr('src', self.resultImage);
+            //$scope.$apply(); // Apply the changes.
+        };
 
         init();
     }

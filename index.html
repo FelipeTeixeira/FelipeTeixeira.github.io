@@ -1,82 +1,6 @@
-<!DOCTYPE html>
-<!-- <html lang="pt-br" data-ng-app="offy-app" manifest="offline.manifest"> -->
-<html lang="pt-br" data-ng-app="offy-app">
-<head>
-    <base href="/">
-
-    <meta charset="utf-8" />
-    <title>Offy</title>
-     <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1.0, initial-scale=1.0, user-scalable=0">
-    <link rel="apple-touch-icon" sizes="57x57" href="./assets/img/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./assets/img/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./assets/img/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./assets/img/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/img/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./assets/img/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/icons/favicon-16x16.png">
-    <link rel="manifest" href="./assets/img/icons/manifest.json">
-    <meta name="msapplication-TileColor" content="#8c2898">
-    <meta name="msapplication-TileImage" content="./assets/img/icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#8c2898">
-
-
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script>
-        if('serviceWorker' in navigator){
+<!DOCTYPE html><!-- <html lang="pt-br" data-ng-app="offy-app" manifest="offline.manifest"> --><html lang="pt-br" data-ng-app="offy-app"><head><base href="/"><meta charset="utf-8"><title>Offy</title><meta name="viewport" content="width=device-width,height=device-height,minimum-scale=1,initial-scale=1,user-scalable=0"><link rel="apple-touch-icon" sizes="57x57" href="./assets/img/icons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="./assets/img/icons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="./assets/img/icons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="./assets/img/icons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="./assets/img/icons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="./assets/img/icons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="./assets/img/icons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="./assets/img/icons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="./assets/img/icons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="./assets/img/icons/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="./assets/img/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="./assets/img/icons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="./assets/img/icons/favicon-16x16.png"><link rel="manifest" href="./assets/img/icons/manifest.json"><meta name="msapplication-TileColor" content="#8c2898"><meta name="msapplication-TileImage" content="./assets/img/icons/ms-icon-144x144.png"><meta name="theme-color" content="#8c2898"><link rel="stylesheet" href="assets/css/style.css"><script>if('serviceWorker' in navigator){
             // navigator.serviceWorker.register('service-worker.js')
-        }
-    </script>
-    <script src="lib/angular.min.js"></script>
-    <script src="lib/angular-ui-router.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/routes.js"></script>
-
-    <!-- CONTROLLERS -->
-    <script src="js/controllers/masterCtrl.js"></script>
-    <!-- LOGIN -->
-    <script src="js/controllers/loginEmailCtrl.js"></script>
-    <script src="js/controllers/loginCreateAccountCtrl.js"></script>
-    <!--/LOGIN -->
-    <script src="js/controllers/homeCtrl.js"></script>
-    <script src="js/controllers/offerCtrl.js"></script>
-    <script src="js/controllers/commentsCtrl.js"></script>
-    <script src="js/controllers/favoritesCtrl.js"></script>
-    <script src="js/controllers/publishCtrl.js"></script>
-    <script src="js/controllers/publishStepOneCtrl.js"></script>
-    <script src="js/controllers/publishStepTwoCtrl.js"></script>
-    <script src="js/controllers/publishSuccessCtrl.js"></script>
-    <script src="js/controllers/profileCtrl.js"></script>
-
-    <script src="js/controllers/alertsCtrl.js"></script>
-
-    <!-- SERVICES -->
-    <script src="js/services/offerService.js"></script>
-    <script src="js/services/loginService.js"></script>
-    <script src="js/services/userService.js"></script>
-    <script src="js/services/geoLocationService.js"></script>
-    <script src="js/services/publishService.js"></script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4Z0OkIu20yfKBTbmAF0Sou2bqHmkv48&libraries=places"
-    async defer></script>
-
-</head>
-    <body>
-        <div data-ng-include="'views/partials/svg.html'"></div>
-
-        <div data-ui-view></div>
-        <div data-ng-include="'views/partials/search.html'"></div>
-
-        <script src="lib/jquery.js"></script>
-        <script src="lib/angular-image-cropper.js"></script>
-    	<script type="text/javascript">
-    		var body = $("body");
+        }</script><script src="lib/angular.min.js"></script><script src="lib/angular-ui-router.min.js"></script><script src="js/app.js"></script><script src="js/routes.js"></script><!-- CONTROLLERS --><script src="js/controllers/masterCtrl.js"></script><!-- LOGIN --><script src="js/controllers/loginEmailCtrl.js"></script><script src="js/controllers/loginCreateAccountCtrl.js"></script><!--/LOGIN --><script src="js/controllers/homeCtrl.js"></script><script src="js/controllers/offerCtrl.js"></script><script src="js/controllers/commentsCtrl.js"></script><script src="js/controllers/favoritesCtrl.js"></script><script src="js/controllers/publishCtrl.js"></script><script src="js/controllers/publishStepOneCtrl.js"></script><script src="js/controllers/publishStepTwoCtrl.js"></script><script src="js/controllers/publishSuccessCtrl.js"></script><script src="js/controllers/profileCtrl.js"></script><script src="js/controllers/alertsCtrl.js"></script><!-- SERVICES --><script src="js/services/offerService.js"></script><script src="js/services/loginService.js"></script><script src="js/services/userService.js"></script><script src="js/services/geoLocationService.js"></script><script src="js/services/publishService.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG4Z0OkIu20yfKBTbmAF0Sou2bqHmkv48&libraries=places" async defer="defer"></script></head><body><div data-ng-include="'views/partials/svg.html'"></div><div data-ui-view></div><div data-ng-include="'views/partials/search.html'"></div><script src="lib/jquery.js"></script><script src="lib/angular-image-cropper.js"></script><script type="text/javascript">var body = $("body");
 
     		function debounce(func, wait, immediate) {
     			var timeout;
@@ -181,11 +105,4 @@
                 location.hash = "";
                 $(".publishAutocomplete").removeClass("active");
                 $("body").removeClass("location-active");
-            });
-
-
-
-
-    	</script>
-    </body>
-</html>
+            });</script></body></html>

@@ -8,12 +8,17 @@
 
     function GeoLocationService($window, $q) {
 
+        var currentPosition = null;
+
         var coordinates = function() {
             var deferred = $q.defer();
             var geolocation = $window.navigator.geolocation;
 
-            if (geolocation) {
+            if (currentPosition) {
+                deferred.resolve(currentPosition);
+            } else if (geolocation) {
                 geolocation.getCurrentPosition(function(position) {
+                    currentPosition = position.coords;
                     deferred.resolve(position.coords);
                 });
             } else {

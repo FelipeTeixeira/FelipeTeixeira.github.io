@@ -2,7 +2,7 @@
     'use strict';
     angular.module('offy-app', ['ui.router', 'imageCropper'])
         .constant('config', {
-            apiUrl: '{{tokens.base_url}}'
+            apiUrl: 'https://promocial.herokuapp.com'
         })
 
         // REMOVE NG-SCOPE
@@ -10,7 +10,9 @@
             $compileProvider.debugInfoEnabled(false);
         }])
 
-        .run(function ($transitions, $state, $location, $window, $http) {
+        .run(function ($transitions, $state, $location, $window, $http, config, $rootScope) {
+            $rootScope.apiUrl = config.apiUrl;
+
             // if user is not authenticated take him to login page
             $transitions.onStart({ to: ['profile', 'favorites', 'publish', 'alerts'] }, function (trans) {
                 var loginService = trans.injector().get('LoginService');

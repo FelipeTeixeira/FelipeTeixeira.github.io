@@ -15,12 +15,12 @@
             console.log(publishService.offer());
             self.image = publishService.offer().image;
 
-            var reader = new FileReader();
-            reader.readAsDataURL(self.image);
+            //var reader = new FileReader();
+            //reader.readAsDataURL(self.image);
 
-            reader.onload = function (e) {
-                $('.publish-imgOptions-image').attr('src', e.target.result);
-            }
+            //reader.onload = function (e) {
+                $('.publish-imgOptions-image').attr('src', self.image);
+            //}
 
 
         };
@@ -55,7 +55,7 @@
             publishService.description(self.description);
             publishService.price(self.price);
             publishService.place(self.placeData);
-            return $state.go('publishFourStep');
+            //return $state.go('publishFourStep');
 
             publishService.post().then(function(response) {
                 console.log('success');

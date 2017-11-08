@@ -28,10 +28,10 @@
             //payload.append('file', offerData['image']);
 
             files.forEach(function(prop) {
-                if (prop !== 'image') {
+                //if (prop !== 'image') {
                     var data = prop === 'place' ? JSON.stringify(offerData[prop]) : offerData[prop];
                     payload.append(prop, data);
-                }
+                //}
             });
             return $http.post(config.apiUrl + '/api/promos/', payload, {
                 transformRequest: angular.identity,
