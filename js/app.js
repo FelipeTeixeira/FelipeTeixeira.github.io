@@ -3,6 +3,8 @@
     angular.module('offy-app', ['ui.router', 'imageCropper'])
         .constant('config', {
             apiUrl: 'https://promocial.herokuapp.com'
+
+            
         })
 
         // REMOVE NG-SCOPE
